@@ -10,7 +10,7 @@ executes a task when it detects changes to files matching a set pattern.
 Add `lein-auto` as a plugin dependency to your project or profiles.
 
 ```clojure
-:plugins [[lein-auto "0.1.3"]]
+:plugins [[me.arrdem/lein-auto "a.b.c"]]
 ```
 
 ## Usage
@@ -42,8 +42,10 @@ also apply options to a specific task:
 There are currently four options available:
 
 - `:paths` -
-  list of directories scanned for files. (defaults to concatenation
-  of project `:source-paths`, `:java-source-paths` and `:test-paths`).
+  a list of directory paths as strings, and keywords naming Leiningen paths. All paths are
+  concatenated together and scanned for file changes according to the `:file-pattern`. When merging
+  task-specific options with the `:default` options, `:paths` are concatenated (defaults to the
+  `[:source-paths :java-source-paths :test-paths]`).
 
 - `:file-pattern` -
   a regular expression that determine which files to watch (defaults
@@ -60,6 +62,8 @@ There are currently four options available:
   bright-magenta bright-cyan bright-white.
 
 ## License
+
+Copyright © 2018 Reid "arrdem" McKenzie
 
 Copyright © 2016 James Reeves
 
