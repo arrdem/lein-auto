@@ -1,4 +1,5 @@
 # Lein-Auto
+[![Clojars Project](https://img.shields.io/clojars/v/me.arrdem/lein-auto.svg)](https://clojars.org/me.arrdem/lein-auto)
 
 A [Leiningen][] plugin that watches the project source directories, and
 executes a task when it detects changes to files matching a set pattern.
